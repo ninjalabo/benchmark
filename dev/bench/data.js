@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1720604382024,
+  "lastUpdate": 1720761828696,
   "repoUrl": "https://github.com/ninjalabo/tinyRuntime",
   "entries": {
     "Python Benchmark ARM": [
@@ -38,6 +38,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.00012873316330504122",
             "extra": "mean: 6.484040055555547 msec\nrounds: 126"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "hiroshi.doyu@ninjalabo.ai",
+            "name": "Hiroshi Doyu",
+            "username": "doyu"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "c84e9416a1c6f5da221606e01bb78c124419fafd",
+          "message": "Merge pull request #147 from ninjalabo/check-speed-for-every-commit\n\nautomate benchmarking with GitHub Actions",
+          "timestamp": "2024-07-12T08:21:52+03:00",
+          "tree_id": "8702cc2fe02fcd4592e25c3c5d117fe3fdfe10a1",
+          "url": "https://github.com/ninjalabo/tinyRuntime/commit/c84e9416a1c6f5da221606e01bb78c124419fafd"
+        },
+        "date": 1720761828014,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "benchmark.py::test_vanilla_tinyruntime",
+            "value": 262.0760944288308,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00015778263985537802",
+            "extra": "mean: 3.8156856777776778 msec\nrounds: 90"
+          },
+          {
+            "name": "benchmark.py::test_quantized_tinyruntime",
+            "value": 237.06987058694446,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00008854904758260394",
+            "extra": "mean: 4.218165714285712 msec\nrounds: 175"
           }
         ]
       }

@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1721701064376,
+  "lastUpdate": 1721701198011,
   "repoUrl": "https://github.com/ninjalabo/tinyRuntime",
   "entries": {
     "Python Benchmark ARM": [
@@ -382,6 +382,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.002983694535930296",
             "extra": "mean: 18.437186720000227 msec\nrounds: 50"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "haru.doyu@gmail.com",
+            "name": "hd702",
+            "username": "harukadoyu"
+          },
+          "committer": {
+            "email": "haru.doyu@gmail.com",
+            "name": "hd702",
+            "username": "harukadoyu"
+          },
+          "distinct": true,
+          "id": "7676a93c36aa78810d9294655e857e7e8bc33bde",
+          "message": "fix compiler to load model to CPU\n\n`ninjalabo/compiler-export-models` (`prep_model.py`), which previously loaded the model on the device where it was saved, now always loads the model to the CPU. This change avoids errors when loading a GPU-saved model on a CPU-only machine. Additionally, the GitHub workflow for the compiler has been modified to be triggered only when related files are changed.",
+          "timestamp": "2024-07-23T05:14:19+03:00",
+          "tree_id": "9d3c6f48e5627c9d3324d6985764677b4e5954bf",
+          "url": "https://github.com/ninjalabo/tinyRuntime/commit/7676a93c36aa78810d9294655e857e7e8bc33bde"
+        },
+        "date": 1721701197870,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "benchmark.py::test_vanilla_tinyruntime",
+            "value": 75.00877970271378,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0005246928275828912",
+            "extra": "mean: 13.331772679989626 msec\nrounds: 50"
+          },
+          {
+            "name": "benchmark.py::test_quantized_tinyruntime",
+            "value": 74.52803919150361,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0005957680454245711",
+            "extra": "mean: 13.417768813566246 msec\nrounds: 59"
           }
         ]
       }
